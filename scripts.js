@@ -106,28 +106,34 @@ function ready(fn) {
 	}
 }
 
-var video = document.getElementById("myVideo");
-var btn = document.getElementById("myBtn");
 
-function myFunction() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
-  } else {
-    video.pause();
-    btn.innerHTML = "Play";
-  }
+
+function togglePause() {
+
+	var video = document.getElementById("myVideo");
+
+	if (video.paused) {
+		document.getElementById("pauseBtn").textContent = "Pause";
+		video.play();
+	} else {
+		document.getElementById("pauseBtn").textContent = "Play";
+		video.pause();
+		
+		
+	}
 }
 
 function toggleMute() {
 
-var video=document.getElementById("myVideo");
-
-if(video.muted){
-  video.muted = false;
-} else {
-  video.muted = true;
-}
+	var video=document.getElementById("myVideo");
+	
+	if(video.muted){
+	video.muted = false;
+	document.getElementById("muteBtn").textContent = "Mute";
+	} else {
+	video.muted = true;
+	document.getElementById("muteBtn").textContent = "Unmute";
+	}
 
 }
 
