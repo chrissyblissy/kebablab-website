@@ -12,3 +12,6 @@ Next Release {
   Teaser?
 }
 
+Tour Dates {
+  List of dates at The Frothy Coffee Castle
+}
