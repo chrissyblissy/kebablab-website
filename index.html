@@ -7,51 +7,50 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
 	<title>Kebablab</title>
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
-
 	<link rel="stylesheet" href="./styles.css">
+	<script type="text/javascript" src="scripts/songData.js"></script>
 </head>
 
-<!-- Creates carousel items for songs-->
 <body>
+
+	<!-- Creates top navigation bar -->
+	<nav class="topnav">
+		<li class="navbutton"><a href="index.html">The Library</a></li>
+		<li class="navbutton"><a href="release.html">Next Release</a></li>
+		<li class="navbutton"><a href="tour.html">Tour Dates</a></li>
+	</nav>
+
+	<!-- Creates carousel items for songs-->
 	<div class="container">
 		<div id="carousel">
 			<div class="carousel-item-spacer">
 				<p>This is a spacer</p>
 			</div>
 
-			<div class="carousel-item">
-				<div class="center">
-					<h2>Bacardi Breezers for One</h2>
-					<p>Song</p>
-				</div>
-			</div>
-			<div class="carousel-item">
-				<div class="center">
-					<h2>Absolute Wonga</h2>
-					<p>WONGA</p>
-				</div>
-			</div>
-			<div class="carousel-item">
-				<div class="center">
-					<h2>Shrivel Handed Lover</h2>
-					<p>PUT THE GLOVES ON</p>
-				</div>
-			</div>
+			<!-- Creates as many carousel items as there is data in songData.js -->
+			<script type="text/javascript" src="scripts/populatecarousel.js"></script>
+
 			<div class="carousel-item-spacer">
 				<p>This is a spacer</p>
 			</div>
 		</div>
 	</div>
-	<script src="scripts.js"></script>
-<!-- Creates background video-->	
+
+
+	<!-- Creates background video	-->
 	<video autoplay muted loop id="myVideo">
-		<source src="keba.mp4" type="video/mp4">
+		<source src="images/keba.mp4" type="video/mp4">
 		Your browser does not support HTML5 video.
 	</video>
-<!-- Creates toggle buttons for Play/Pause and Mute/Unmute -->
+
+	<!-- Creates toggle buttons for Play/Pause and Mute/Unmute -->
 	<div class="content">
-		<button id="pauseBtn" onclick="togglePause()">Pause</button>
-		<button id="muteBtn" onclick="toggleMute()">Unmute</button>
+		<button id="pauseBtn" class="videoBtn" onclick="togglePause()">Pause</button>
+		<button id="muteBtn" class="videoBtn" onclick="toggleMute()">Unmute</button>
 	</div>
+	<!-- runs the scripts for the carousel and toggle buttons -->
+	<script src="scripts/scripts.js"></script>
+
 </body>
+
 </html>
